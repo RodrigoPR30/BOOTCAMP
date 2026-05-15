@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Profissional - Rodrigo Portugal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #3c4043; /* Cor de texto cinza escuro padrão */
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Container principal para centralizar o conteúdo com margens */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Linhas pontilhadas divisórias */
+        hr.divider {
+            border: 0;
+            border-top: 1px dotted #ccc;
+            margin: 40px 0;
+        }
+
+        /* Títulos principais em azul claro */
+        h1, h2, .profile-text {
+            color: #4472c4; /* Cor azul claro da imagem */
+            font-weight: 300; /* Peso da fonte fino */
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        h2 {
+            font-size: 28px;
+        }
+
+        /* Seção 1: Apresentação e Perfil */
+        .profile-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .profile-text-container {
+            flex: 1;
+        }
+
+        .profile-image-container {
+            flex: 1;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: auto;
+            border-radius: 4px; /* Leve arredondamento como na imagem */
+            object-fit: cover;
+        }
+
+        /* Seção 2: Título dos Trabalhos (em destaque) */
+        .work-title-container {
+            background-color: #f8f9fa; /* Fundo cinza muito claro */
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .work-title-text {
+            color: #4472c4;
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        /* Seção 3: Grid de Vídeo e Slides */
+        .media-grid {
+            display: flex;
+            gap: 20px;
+        }
+
+        .media-item {
+            flex: 1;
+        }
+
+        /* Estilos para Iframe do Google Slides */
+        .slides-iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9; /* Mantém a proporção do slide */
+            border: none;
+        }
+
+        /* Título abaixo dos slides */
+        .media-caption {
+            font-size: 14px;
+            color: #5f6368;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Estilos para Iframe do YouTube */
+        .video-iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9; /* Mantém a proporção do vídeo */
+            border: none;
+        }
+
+        /* Seção 4: Currículo e Contato */
+        .resume-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .resume-preview-container {
+            flex: 1;
+        }
+
+        /* Iframe para pré-visualizar o PDF do currículo */
+        .resume-iframe {
+            width: 100%;
+            height: 600px; /* Altura para mostrar uma boa parte do currículo */
+            border: none;
+        }
+
+        .contact-container {
+            flex: 1;
+        }
+
+        /* Subtítulo de contato */
+        .contact-subtitle {
+            font-size: 24px;
+            color: #3c4043;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        /* Link de e-mail */
+        .email-link {
+            font-size: 18px;
+            color: #4472c4;
+            text-decoration: none;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade para telas menores (celulares) */
+        @media (max-width: 768px) {
+            .profile-section, .media-grid, .resume-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h1 { font-size: 28px; }
+            h2 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <section class="profile-section">
+            <div class="profile-text-container">
+                <h1 class="profile-text">
+                    Olá, meu nome é Rodrigo Portugal Rodrigues. Sou estudante de Ciência da Computação na UniCeub
+                </h1>
+            </div>
+            <div class="profile-image-container">
+                <img src="link_para_sua_foto_de_perfil.jpg" alt="Foto de Rodrigo Portugal" class="profile-image">
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section class="work-title-container">
+            <p class="work-title-text">Trabalhos selecionados</p>
+        </section>
+
+        <hr class="divider">
+
+        <section class="media-grid">
+            <div class="media-item">
+                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR6z.../embed?start=false&loop=false&delayms=3000" class="slides-iframe" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                <p class="media-caption">Portfólio Profissional</p>
+            </div>
+            <div class="media-item">
+                <iframe src="https://www.youtube.com/embed/SEU_ID_DO_VIDEO_AQUI" class="video-iframe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <section class="resume-section">
+            <div class="resume-preview-container">
+                <iframe src="https://drive.google.com/file/d/SUA_ID_DO_ARQUIVO/preview" class="resume-iframe"></iframe>
+            </div>
+            <div class="contact-container">
+                <h2>Currículo Profissional</h2>
+                <h3 class="contact-subtitle">Forma de contato:</h3>
+                <a href="mailto:rodrigoportugal30@gmail.com" class="email-link">
+                    e-mail: rodrigoportugal30@gmail.com
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
